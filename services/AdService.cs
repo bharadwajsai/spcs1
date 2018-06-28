@@ -1,7 +1,11 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Threading.Tasks;
 using google;
 using file;
+using AutoMapper;
+using models.ad.viewmodels;
+using models.ad.entities;
 
 namespace services
 {
@@ -10,11 +14,18 @@ namespace services
         //private readonly IUnitOfWork _unitOfWork;
         private readonly IFileRead _fileReadService;
         private readonly IGoogleStorage _googleStorage;
+        private readonly IMapper _mapper;
 
-        public AdService(IFileRead fileReadService, IGoogleStorage googleStorage)
+        public AdService(IMapper mapper, IFileRead fileReadService, IGoogleStorage googleStorage)
         {
+            _mapper = mapper;
             _fileReadService = fileReadService;
             _googleStorage = googleStorage;
+
+            //Ad ad = new Ad() { AdId = 1, ActiveDays = 1, AdAssetId = Guid.Empty, CreatedDateTime = DateTime.Now, Email = "chinna.tatikella@khs-net.com", PhoneNumber = "515-707-7725" };
+            //Advm advm = _mapper.Map<Advm>(ad);
+            //advm.AdAssetId = Guid.NewGuid(); advm.PhoneNumber = "444444";
+            //Ad dd = _mapper.Map<Ad>(advm);
         }
 
         public async Task UploadObjectInGoogleStorageAsync(string bucketName, Stream stream, string objectName, string contentType)

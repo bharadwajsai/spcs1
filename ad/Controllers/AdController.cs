@@ -34,7 +34,7 @@ namespace ad.Controllers
             if (string.IsNullOrWhiteSpace(fileName)) throw new ArgumentOutOfRangeException(nameof(fileName));
             string bucketName = _configuration["AdBucketNameInGoogleCloudStorage"];
             if (string.IsNullOrWhiteSpace(bucketName)) throw new ArgumentOutOfRangeException(nameof(bucketName));
-            Guid assetKey = new Guid();
+            Guid assetKey = Guid.NewGuid();
             string objectNameWithExt = string.Format("{0}{1}", assetKey.ToString("N"), Path.GetExtension(fileName));
             string contentType = Utility.GetMimeTypes()[Path.GetExtension(fileName)];
             var anonymousDataObject = data.ConvertToAnonymousType(data);

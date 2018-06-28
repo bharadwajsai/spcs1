@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace models.ad
+namespace models.ad.entities
 {
     public class AdAsset
     {

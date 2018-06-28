@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace models.article
+namespace models.article.entities
 {
-    public class Article
+    public class Articlevm
     {
         public Int64 ArticleId { get; set; }
         public string Title { get; set; }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using models.article;
+using models.article.entities;
 
 namespace db
 {
