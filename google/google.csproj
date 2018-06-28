@@ -4,4 +4,8 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="2.2.0-beta01" />
+  </ItemGroup>
+
 </Project>

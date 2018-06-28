@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.IO;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.FileProviders;
+using Microsoft.Extensions.Logging;
 
 namespace config.Controllers
 {
@@ -10,6 +12,20 @@ namespace config.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly IConfiguration _configuration;
+        private readonly ILogger<ValuesController> _logger;
+        private readonly IFileProvider _fileProvider;
+        private readonly IHostingEnvironment _hostingEnvironment;
+        private readonly string _path;
+
+        public ValuesController(IConfiguration configuration, ILogger<ValuesController> logger, IHostingEnvironment hostingEnvironment, IFileProvider fileProvider)
+        {
+            _configuration = configuration;
+            _hostingEnvironment = hostingEnvironment;
+            _logger = logger;
+            _fileProvider = fileProvider;
+            _path = Path.Combine(_hostingEnvironment.ContentRootPath, @"files\countries.json");
+        }
         // GET api/values
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()

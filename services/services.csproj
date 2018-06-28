@@ -4,4 +4,12 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\db\db.csproj" />
+    <ProjectReference Include="..\file\file.csproj" />
+    <ProjectReference Include="..\google\google.csproj" />
+    <ProjectReference Include="..\models\models.csproj" />
+    <ProjectReference Include="..\share\share.csproj" />
+  </ItemGroup>
+
 </Project>

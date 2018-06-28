@@ -6,9 +6,6 @@
 
   <ItemGroup>
     <Folder Include="extension\" />
-    <Folder Include="const\" />
-    <Folder Include="enum\" />
-    <Folder Include="utility\" />
   </ItemGroup>
 
 </Project>
