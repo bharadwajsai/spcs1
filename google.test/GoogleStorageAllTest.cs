@@ -20,5 +20,15 @@ namespace Google.Test
             storage.UploadFile(bucketName, fileName, objectName);
             Assert.True(1 < 2);
         }
+
+        [Fact]
+        public void Test_LoadAnyJsonLocalFile()
+        {
+            var configurationBuilder = new ConfigurationBuilder()
+            .SetBasePath(Directory.GetCurrentDirectory())
+            .AddJsonFile("spgoogle-fe1635053afe.json", optional: false, reloadOnChange: true);
+
+            Assert.True(1 < 2);
+        }
     }
 }

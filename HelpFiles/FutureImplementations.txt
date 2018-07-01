@@ -1,0 +1,3 @@
+prevent DDoS attacks on any web.api method:
+https://www.johanbostrom.se/blog/request-throttling-in-net-core-mvc-and-api
+==============================================================================
