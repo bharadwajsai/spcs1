@@ -6,7 +6,7 @@ using System.Net.Http;
 
 //https://www.youtube.com/watch?v=p5l7x_pFjmI
 //https://www.meziantou.net/2017/08/21/testing-an-asp-net-core-application-using-testserver
-namespace ad.test
+namespace Ad.Test
 {
     public class TestClientProvider : IDisposable
     {
@@ -19,7 +19,7 @@ namespace ad.test
                     .ConfigureAppConfiguration(
                         (builderContext, config) => { config.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);}
                     )
-                    .UseStartup<ad.Startup>();
+                    .UseStartup<Ad.Startup>();
 
             _server = new TestServer(webHostBuilder);
             HttpClient = _server.CreateClient();

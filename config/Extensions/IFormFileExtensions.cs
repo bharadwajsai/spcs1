@@ -3,7 +3,7 @@ using System.IO;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace config.Extensions
+namespace Config.Extensions
 {
     public static class IFormFileExtensions
     {

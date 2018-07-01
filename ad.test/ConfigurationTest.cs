@@ -5,7 +5,7 @@ using System.Net;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace ad.test
+namespace Ad.Test
 {
     public class ConfigurationTest
     {

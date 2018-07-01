@@ -1,11 +1,11 @@
-using google;
+using Google;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.IO;
 using Xunit;
 
 //https://console.cloud.google.com/storage/browser?project=oceanic-cacao-203021&folder&organizationId
-namespace google.test
+namespace Google.Test
 {
     public class GoogleStorageAllTest
     {

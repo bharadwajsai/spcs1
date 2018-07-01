@@ -1,14 +1,14 @@
 ﻿using System;
-using file;
-using google;
+using File;
+using Google;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using services;
+using Services;
 
-namespace article
+namespace Article
 {
     public class Startup
     {

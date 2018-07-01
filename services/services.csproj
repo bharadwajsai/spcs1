@@ -9,11 +9,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\db\db.csproj" />
-    <ProjectReference Include="..\file\file.csproj" />
-    <ProjectReference Include="..\google\google.csproj" />
-    <ProjectReference Include="..\models\models.csproj" />
-    <ProjectReference Include="..\share\share.csproj" />
+    <ProjectReference Include="..\DbContexts\DbContexts.csproj" />
+    <ProjectReference Include="..\File\File.csproj" />
+    <ProjectReference Include="..\Google\Google.csproj" />
+    <ProjectReference Include="..\Models\Models.csproj" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
+    <ProjectReference Include="..\Share\Share.csproj" />
   </ItemGroup>
 
 </Project>

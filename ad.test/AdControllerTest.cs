@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace ad.test
+namespace Ad.Test
 {
     public class AdControllerTest
     {

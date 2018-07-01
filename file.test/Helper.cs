@@ -1,9 +1,9 @@
-﻿using file;
+﻿using File;
 using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using System;
 
-namespace file.test
+namespace File.Test
 {
     public class Helper
     {

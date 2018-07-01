@@ -3,9 +3,9 @@ using System;
 using Xunit;
 using FluentAssertions;
 using System.IO;
-using file;
+using File;
 
-namespace file.test
+namespace File.Test
 {
     public class FileReadTest
     {

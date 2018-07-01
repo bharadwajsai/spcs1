@@ -6,7 +6,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Logging;
 
-namespace config.Controllers
+namespace Config.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

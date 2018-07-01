@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
-using config.Extensions;
+using Config.Extensions;
 using System;
 using Microsoft.Extensions.Logging;
-using config.Services;
+using Config.Services;
 using Swashbuckle.AspNetCore.Swagger;
 
-namespace config
+namespace Config
 {
     public class Startup
     {

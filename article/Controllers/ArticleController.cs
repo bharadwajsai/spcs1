@@ -1,13 +1,13 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using models.article.controllerparam;
+using Models.Article.ArticleController;
 
 //https://webapphuddle.com/design-tags-feature-in-web-apps/
 //https://www.maketecheasier.com/5-online-tools-to-create-tag-clouds/
 //https://www.ebates.com/rf.do?referrerid=vdPURIW4fINgWguIRm6jRQ%3D%3D&eeid=28585
 //https://market.mashape.com/
-namespace article.Controllers
+namespace Article.Controllers
 {
     [Route("[controller]/[action]")]
     public class ArticleController : ControllerBase
@@ -22,7 +22,7 @@ namespace article.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostArticle([FromBody] PostArticle data)
+        public IActionResult PostArticle([FromBody] PostArticleModel data)
         {
             return Ok(new { Name = "Chinna", Email = "chinnarao@live.com" });
         }

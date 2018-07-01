@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace models.ad.entities
+namespace Models.Ad.Entities
 {
     public class Ad
     {

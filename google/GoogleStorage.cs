@@ -3,7 +3,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace google
+namespace Google
 {
     public class GoogleStorage : IGoogleStorage
     {

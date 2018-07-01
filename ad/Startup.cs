@@ -5,14 +5,15 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
-using db;
-using services;
-using google;
-using file;
+using Google;
+using File;
+using DbContexts;
+using Services;
 //https://github.com/dotnet-architecture/eShopOnWeb
 //https://github.com/aspnet/Docs/blob/master/aspnetcore/test/integration-tests/samples/2.x/IntegrationTestsSample/src/RazorPagesProject/Startup.cs
 //https://github.com/dotnet-presentations/home/tree/master/ASP.NET%20Core/ASP.NET%20Core%20-%20What-s%20New
-namespace ad
+//https://www.linode.com/pricing
+namespace Ad
 {
     public class Startup
     {
@@ -32,9 +33,9 @@ namespace ad
 
             services.AddSingleton(new AutoMapper.MapperConfiguration(cfg => { cfg.AddProfile(new AutoMapperProfile()); }).CreateMapper());
 
-            services.AddTransient<IAdService, AdService>();
-            services.AddTransient<IFileRead, FileRead>();
-            services.AddTransient<IGoogleStorage, GoogleStorage>();
+            services.AddScoped<IAdService, AdService>();
+            services.AddScoped<IFileRead, FileRead>();
+            services.AddScoped<IGoogleStorage, GoogleStorage>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
             #region Swagger
             // Register the Swagger generator, defining 1 or more Swagger documents

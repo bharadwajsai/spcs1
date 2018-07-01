@@ -5,7 +5,7 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Net.Http.Headers;
 
 //https://github.com/madskristensen/WebEssentials.AspNetCore.StaticFilesWithCache
-namespace config.Extensions
+namespace Config.Extensions
 {
     public static class ApplicationBuilderExtension
     {

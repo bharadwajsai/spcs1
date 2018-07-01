@@ -1,12 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
-using models.ad.controllerparam;
-using services;
+using Models.Ad.AdController;
+using Services;
 using System;
 using System.IO;
 
-namespace ad.Controllers
+namespace Ad.Controllers
 {
     //https://github.com/aspnet/Docs/blob/master/aspnetcore/fundamentals/logging/index/sample2/Controllers/TodoController.cs
     [Route("[controller]/[action]")]
@@ -24,7 +24,7 @@ namespace ad.Controllers
         }
 
         [HttpPost]
-        public IActionResult PostAd([FromBody]PostAd data)
+        public IActionResult PostAd([FromBody]PostAdModel data)
         {
             if (string.IsNullOrWhiteSpace(data.Name)) return BadRequest("Invalid input :" + nameof(data.Name));
             if (string.IsNullOrWhiteSpace(data.Occupation)) return BadRequest("Invalid input :" + nameof(data.Occupation));

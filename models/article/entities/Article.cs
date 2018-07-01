@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace models.article.entities
+namespace Models.Article.Entities
 {
     public class Article
     {

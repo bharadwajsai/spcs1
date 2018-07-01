@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.IO;
 using Microsoft.Extensions.FileProviders;
-using config.Extensions;
+using Config.Extensions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Hosting;
-using config.Models;
+using Config.Models;
 using System;
 using Microsoft.Extensions.Caching.Memory;
-using config.Services;
+using Config.Services;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
@@ -22,7 +22,7 @@ using Microsoft.AspNetCore.Http;
 //https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-2.1
 #endregion
 
-namespace config.Controllers
+namespace Config.Controllers
 {
     //header('Content-type: application/json');
     //[Produces("application/json")]

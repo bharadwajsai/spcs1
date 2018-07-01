@@ -1,13 +1,13 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using google;
-using file;
+using Google;
+using File;
 using AutoMapper;
-using models.ad.viewmodels;
-using models.ad.entities;
+using Models.Ad.Models;
+using Models.Ad.Entities;
 
-namespace services
+namespace Services
 {
     public class AdService : IAdService
     {
