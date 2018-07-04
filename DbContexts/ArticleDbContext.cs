@@ -10,6 +10,11 @@ namespace DbContexts
         {
         }
 
+        public static ArticleDbContext Create(string connection = "Server=localhost;Database=identity;Trusted_Connection=True;")
+        {
+            return new ArticleDbContext(new DbContextOptionsBuilder<ArticleDbContext>().UseSqlServer(connection).Options);
+        }
+
         public DbSet<Article> Articles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

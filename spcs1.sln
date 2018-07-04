@@ -52,6 +52,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Img", "Img", "{2D4A67C1-C8A
 		HelpFiles\Img\sqlserver.png = HelpFiles\Img\sqlserver.png
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbContexts.AdMigration", "DbContexts.AdMigration\DbContexts.AdMigration.csproj", "{DAE46C1C-8FC9-48FF-B447-C067E12306FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbContexts.ArticleMigration", "DbContexts.ArticleMigration\DbContexts.ArticleMigration.csproj", "{A74E9F26-D477-477E-BA5C-87136C4B4E52}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -122,6 +126,14 @@ Global
 		{08021377-2196-496E-BCD8-1AD28711BDF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{08021377-2196-496E-BCD8-1AD28711BDF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{08021377-2196-496E-BCD8-1AD28711BDF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAE46C1C-8FC9-48FF-B447-C067E12306FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAE46C1C-8FC9-48FF-B447-C067E12306FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAE46C1C-8FC9-48FF-B447-C067E12306FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAE46C1C-8FC9-48FF-B447-C067E12306FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A74E9F26-D477-477E-BA5C-87136C4B4E52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74E9F26-D477-477E-BA5C-87136C4B4E52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74E9F26-D477-477E-BA5C-87136C4B4E52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74E9F26-D477-477E-BA5C-87136C4B4E52}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
