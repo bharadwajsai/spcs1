@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using Models.Ad.Entities;
-using Models.Ad.Models;
+using Models.Ad.Dtos;
+using Models.Article.Entities;
+using Models.Article.Dtos;
 
 namespace Services
 {
@@ -8,7 +10,8 @@ namespace Services
     {
         public AutoMapperProfile()
         {
-            CreateMap<Ad, AdModel>().ReverseMap();
+            CreateMap<Ad, AdDto>().ReverseMap();
+            CreateMap<Article, ArticleDto>().ReverseMap();
         }
     }
 }

@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Models.Ad.Models
+namespace Models.Ad.Dtos
 {
-    public class AdModel
+    public class AdDto
     {
         public Int64 AdId { get; set; }
         public Guid AdAssetId { get; set; }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-//using Models.Article.Entities;
+using Models.Article.Entities;
 
 namespace DbContexts
 {
@@ -10,7 +10,7 @@ namespace DbContexts
         {
         }
 
-        //public DbSet<Article> Articles { get; set; }
+        public DbSet<Article> Articles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

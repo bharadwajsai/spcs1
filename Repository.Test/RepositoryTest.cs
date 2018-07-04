@@ -12,7 +12,7 @@ using Xunit;
 
 namespace West.EntityFrameworkCore.Repository.Tests
 {
-    public class RepositoryTest
+    public class RepositoryTestContextTest
     {
         public IDbConnection Connection { get; set; }
 

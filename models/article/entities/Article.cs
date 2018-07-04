@@ -9,7 +9,7 @@ namespace Models.Article.Entities
         public string Description { get; set; }
         public string Content { get; set; }
         public string License { get; set; }
-        public string Commits { get; set; }
+        public string Commits { get; set; }  // json format : [{ "c": "this is comment","d": "just date part"},{"c": "this is comment","d": "just date part"}]
         public string UserId { get; set; }
         public string UserName { get; set; }
         public string UserAvatar { get; set; }

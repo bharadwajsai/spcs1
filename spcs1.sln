@@ -34,12 +34,23 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelpFiles", "HelpFiles", "{044BB58B-D61F-461B-A29C-4B2C319571D4}"
 	ProjectSection(SolutionItems) = preProject
 		HelpFiles\AsyncCodes.txt = HelpFiles\AsyncCodes.txt
+		HelpFiles\FluentApi.txt = HelpFiles\FluentApi.txt
 		HelpFiles\FutureImplementations.txt = HelpFiles\FutureImplementations.txt
+		HelpFiles\SqlOperationsStudio.txt = HelpFiles\SqlOperationsStudio.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Share.Test", "Share.Test\Share.Test.csproj", "{0DE039C7-C616-452B-B5FD-649324EDEE99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Share.Test", "Share.Test\Share.Test.csproj", "{0DE039C7-C616-452B-B5FD-649324EDEE99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Test", "Services.Test\Services.Test.csproj", "{08021377-2196-496E-BCD8-1AD28711BDF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Test", "Services.Test\Services.Test.csproj", "{08021377-2196-496E-BCD8-1AD28711BDF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Img", "Img", "{2D4A67C1-C8A0-4BDD-B18A-EEDD899427C9}"
+	ProjectSection(SolutionItems) = preProject
+		HelpFiles\Img\1.jpg = HelpFiles\Img\1.jpg
+		HelpFiles\Img\clrSql.gif = HelpFiles\Img\clrSql.gif
+		HelpFiles\Img\logo.png = HelpFiles\Img\logo.png
+		HelpFiles\Img\nodebalancer_icon.png = HelpFiles\Img\nodebalancer_icon.png
+		HelpFiles\Img\sqlserver.png = HelpFiles\Img\sqlserver.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -114,6 +125,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2D4A67C1-C8A0-4BDD-B18A-EEDD899427C9} = {044BB58B-D61F-461B-A29C-4B2C319571D4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D91D89C4-CBA3-4FDE-8FF8-BAF419D65386}

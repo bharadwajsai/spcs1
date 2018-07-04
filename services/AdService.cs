@@ -4,8 +4,9 @@ using System.Threading.Tasks;
 using Google;
 using File;
 using AutoMapper;
-using Models.Ad.Models;
+using Models.Ad.Dtos;
 using Models.Ad.Entities;
+using Newtonsoft.Json;
 
 namespace Services
 {
@@ -46,6 +47,5 @@ namespace Services
     {
         void UploadObjectInGoogleStorage(string fileName, int inMemoryCachyExpireDays, string objectName, string bucketName, object anonymousDataObject, string contentType, string CACHE_KEY);
         Task UploadObjectInGoogleStorageAsync(string bucketName, Stream stream, string objectName, string contentType);
-        //IEnumerable<TEntity> GetAll<TEntity>() where TEntity : AdVM, new();
     }
 }

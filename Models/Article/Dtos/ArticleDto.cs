@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Models.Article.Models
+namespace Models.Article.Dtos
 {
-    public class ArticleModel
+    public class ArticleDto
     {
         public Int64 ArticleId { get; set; }
         public string Title { get; set; }
