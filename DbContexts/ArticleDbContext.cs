@@ -1,5 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using DbContexts.ArticleConfigurations;
+using Microsoft.EntityFrameworkCore;
 using Models.Article.Entities;
+using System;
 
 namespace DbContexts
 {
@@ -10,8 +12,14 @@ namespace DbContexts
         {
         }
 
-        public static ArticleDbContext Create(string connection = "Server=localhost;Database=identity;Trusted_Connection=True;")
+        /// <summary>
+        /// this method will be called by DbContexts.ArticleMigration Project, for first time db creation purpose
+        /// </summary>
+        /// <param name="connection"> connection string</param>
+        /// <returns>ArticleDbContext</returns>
+        public static ArticleDbContext Create(string connection)
         {
+            if (string.IsNullOrEmpty(connection)) throw new ArgumentNullException(nameof(connection));
             return new ArticleDbContext(new DbContextOptionsBuilder<ArticleDbContext>().UseSqlServer(connection).Options);
         }
 
@@ -19,19 +27,7 @@ namespace DbContexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder);
+            modelBuilder.ApplyConfiguration(new ArticleConfig());
         }
-
-        //public DbSet<DataEventRecord> DataEventRecords { get; set; }
-        //public DbSet<SourceInfo> SourceInfos { get; set; }
-        //protected override void OnModelCreating(ModelBuilder builder)
-        //{
-        //    builder.Entity<DataEventRecord>().HasKey(m => m.DataEventRecordId);
-        //    builder.Entity<SourceInfo>().HasKey(m => m.SourceInfoId);
-        //    // shadow properties
-        //    builder.Entity<DataEventRecord>().Property<DateTime>("UpdatedTimestamp");
-        //    builder.Entity<SourceInfo>().Property<DateTime>("UpdatedTimestamp");
-        //    base.OnModelCreating(builder);
-        //}
     }
 }

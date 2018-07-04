@@ -6,11 +6,12 @@ using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Models.Ad.Entities;
+using Models.Article.Entities;
 using Xunit;
 
 namespace Repository.Test
 {
-    public class AdDbContextTest
+    public class ArticleDbContextTest
     {
         private IDbConnection Connection { get; set; }
 
@@ -20,8 +21,8 @@ namespace Repository.Test
             Connection.Open();
 
             var services = new ServiceCollection()
-                .AddDbContext<AdDbContext>(options => options.UseSqlite((SqliteConnection)Connection))
-                .AddScoped<Repository<Ad, AdDbContext>>();
+                .AddDbContext<ArticleDbContext>(options => options.UseSqlite((SqliteConnection)Connection))
+                .AddScoped<Repository<Article, ArticleDbContext>>();
 
             return services.BuildServiceProvider();
         }
@@ -32,15 +33,15 @@ namespace Repository.Test
             try
             {
                 var services = GetAdServiceProvider();
-                var repository = services.GetService<Repository<Ad, AdDbContext>>();
-                await services.GetService<AdDbContext>().Database.EnsureCreatedAsync();
+                var repository = services.GetService<Repository<Article, ArticleDbContext>>();
+                await services.GetService<ArticleDbContext>().Database.EnsureCreatedAsync();
 
-                var adObject = new Ad { AdId = 1, UserEmail = "Test1", AdTitle = "title1", AdZipCode = "535558",
+                var articleObject = new Article { ArticleId = 1, UserEmail = "Test1", Title = "title1",
                     AttachedAssetsStoredInCloudBaseFolderPath = "https://console.cloud.google.com/storage/browser/spcsad_first?project=oceanic-cacao-203021&folder&organizationId",
                     UserId = "chinnarao", UserLoggedInSocialProviderName = "facebook"
                  };
 
-                await repository.CreateAsync(adObject);
+                await repository.CreateAsync(articleObject);
 
                 Assert.Equal(1, repository.Entities.Count());
             }

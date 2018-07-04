@@ -24,10 +24,7 @@ namespace Google.Test
         [Fact]
         public void Test_LoadAnyJsonLocalFile()
         {
-            var configurationBuilder = new ConfigurationBuilder()
-            .SetBasePath(Directory.GetCurrentDirectory())
-            .AddJsonFile("spgoogle-fe1635053afe.json", optional: false, reloadOnChange: true);
-
+            IConfiguration config = new ConfigurationBuilder().SetBasePath(Directory.GetCurrentDirectory()).AddJsonFile("spgoogle-fe1635053afe.json", optional: false, reloadOnChange: true).Build();
             Assert.True(1 < 2);
         }
     }

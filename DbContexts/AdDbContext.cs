@@ -13,19 +13,22 @@ namespace DbContexts
         {
         }
 
-        public static AdDbContext Create(string connection = "Server=localhost;Database=Ad;Trusted_Connection=True;")
+        /// <summary>
+        /// this method will be called by DbContexts.AdMigration Project, for first time db creation purpose
+        /// </summary>
+        /// <param name="connection">connection string</param>
+        /// <returns>AdDbContext</returns>
+        public static AdDbContext Create(string connection)
         {
             if (string.IsNullOrEmpty(connection)) throw new ArgumentNullException(nameof(connection));
             return new AdDbContext(new DbContextOptionsBuilder<AdDbContext>().UseSqlServer(connection).Options);
         }
 
         public DbSet<Ad> Ads { get; set; }
-        public DbSet<Asset> AdAssets { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new AdConfig());
-            modelBuilder.ApplyConfiguration(new AssetConfig());
         }
     }
 }

@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Config", "Config\Config.csp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HelpFiles", "HelpFiles", "{044BB58B-D61F-461B-A29C-4B2C319571D4}"
 	ProjectSection(SolutionItems) = preProject
+		HelpFiles\Ad.sql = HelpFiles\Ad.sql
+		HelpFiles\Article.sql = HelpFiles\Article.sql
 		HelpFiles\AsyncCodes.txt = HelpFiles\AsyncCodes.txt
 		HelpFiles\FluentApi.txt = HelpFiles\FluentApi.txt
 		HelpFiles\FutureImplementations.txt = HelpFiles\FutureImplementations.txt

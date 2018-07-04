@@ -19,6 +19,10 @@ tip:
 tip:
 Include for derived types: It will be now possible to specify navigation properties only defined in derived types when writing expressions for the Include() methods. The syntax looks like this:
 var query = context.People.Include(p => ((Student)p).School);
+
+tip: 
+	// every property of type decimal should have a precision of 19 and a scale of 8:
+    modelBuilder.Properties<decimal>().Configure(property => property.HasPrecision(19, 8));
 ============================================================================
 https://github.com/aspnet/EntityFrameworkCore/issues/10108
 ===============================================================================================
